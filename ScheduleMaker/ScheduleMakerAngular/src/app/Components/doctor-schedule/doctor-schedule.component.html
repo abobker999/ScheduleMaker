@@ -1,0 +1,47 @@
+
+        <div class="form-bg">
+            <form #Formdata="ngForm" (ngSubmit)="GetSchedule(Formdata)"  >
+              <div class="panel panel-dark">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Get you schedule</h3>
+                </div>
+                <div class="panel-body">                           
+                    <div class="row">
+                        <div class="col-5">                        
+                        </div >
+                        <div class="col-5">
+                          <div class="form-group ">
+                            <div class="form-group col-5">
+                                <label for="doctorName">your Name</label>
+                                <input id="doctorName" type="text" class="form-control"
+                                      name="doctorName" required ngModel >
+                              </div>
+                            </div>  
+                        </div >
+                     
+                        <div class="col-">
+                          
+                    </div>                            
+                </div>
+                <div class="panel-footer">
+                    <div class="text-center">
+  
+                        <button class="btn btn-primary" type="submit">view Schedule</button>
+                    </div>
+                </div>
+              </div>
+              </div>
+            </form>
+        </div>
+
+        <div class="">
+            <h4 class=" center"> your Scahadule will appear here</h4>
+
+            <table class="table table-active">
+                <tr>
+                    <td *ngFor="let item of result; let i = index">{{item}}</td>                  
+                </tr>
+                
+            </table>
+        </div>
+    
